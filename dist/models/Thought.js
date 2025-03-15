@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 import dayjs from 'dayjs';
-import reactionSchema from './Reaction';
+import reactionSchema from './Reaction.js';
 // Schema to create Post model
 const thoughtSchema = new Schema({
     username: {
