@@ -1,4 +1,4 @@
-import { Schema, model, Document } from 'mongoose';
+import { Schema, model, Document} from 'mongoose';
 import dayjs from 'dayjs';
 import reactionSchema from './Reaction.js';
 
@@ -46,6 +46,6 @@ thoughtSchema.virtual('reactionCount').get(function (this: any) {
   });
 
 // Initialize our Post model
-const Thought = model('thought', thoughtSchema);
+const Thought = model('Thought', thoughtSchema);
 
 export default Thought;

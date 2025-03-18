@@ -99,9 +99,9 @@ export const addReaction = async (req: Request, res: Response) => {
 
 export const deleteReaction = async (req: Request, res: Response) => {
   try {
-    const thought = await Thought.findOneAndDelete(
+    const thought = await Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
-      { $pull: { reactions: { reactionId: req.params.reactionId } } },
+      { $pull: { reactions: { _id: req.params.reactionId } } },
     );
 
     if (!thought) {
